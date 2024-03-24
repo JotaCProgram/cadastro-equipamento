@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Equipamentos Retirados</title>
+    <link rel="stylesheet" href="style-EquipamentosRetirados.css"> <!-- Ajuste o caminho conforme necessário -->
+</head>
+<body>
+    <h1>Equipamentos Retirados</h1>
+    <div id="filtroTipo">
+        <input type="checkbox" id="filtroONT" onchange="filtrarEquipamentosRetirados()"> <label for="filtroONT">ONT</label>
+        <input type="checkbox" id="filtroONU" onchange="filtrarEquipamentosRetirados()"> <label for="filtroONU">ONU</label>
+    </div>
+    <div id="equipamentosRetiradosContainer"></div> <!-- Contêiner para os cards de equipamento -->
+
+    <input type="text" id="commandInput" placeholder="Digite um comando" />
+    <button id="executeCommand">Executar Comando</button>
+
+    <button id="downloadData">Baixar Dados</button>
+    <!-- Botão para ir para a página jsonforexcel.html -->
+    <button id="goToJsonForExcel">Converta JSON para Excel</button>
+
+    <script src="equipamentosRetirados.js"></script> <!-- Ajuste o caminho conforme necessário -->
+</body>
+</html>

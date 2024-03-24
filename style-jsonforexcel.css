@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Altura total da janela de visualização */
+}
+
+.container {
+    width: 30%; /* Largura responsiva */
+    max-width: 500px; /* Largura máxima para telas maiores */
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center; /* Centraliza o texto e os elementos internos do container */
+    margin: auto; /* Centraliza o container */
+}
+
+#drop-area {
+    border: 2px dashed #008cba;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.button-container {
+    margin-top: 20px; /* Espaço entre a área de drop e o botão */
+}
+
+button#convertToJson {
+    width: 100%; /* O botão ocupa toda a largura do container */
+    padding: 10px;
+    background-color: #4CAF50; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+button#convertToJson:hover {
+    background-color: #45a049;
+}
+
+#fileInfo {
+    margin-top: 10px;
+    font-style: italic;
+    color: #555;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 90%; /* Largura adaptável para telas pequenas */
+    }
+}

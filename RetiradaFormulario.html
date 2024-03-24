@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Retirada de Equipamento</title>
+    <link rel="stylesheet" href="style-RetiradaFormulario.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="content">
+        <h1>Formulário de Retirada de Equipamento</h1>
+
+        <form id="formRetirada">
+            <input type="text" id="nomeCliente" placeholder="Nome do Cliente Da Retirada" required>
+            <input type="date" id="dataRetirada" required>
+            <input type="text" id="tipo" placeholder="Tipo"  disabled="true"/>
+            <input type="text" id="marca" placeholder="Marca"  disabled="true"/>
+            <input type="text" id="modelo" placeholder="Modelo" disabled="true"/>
+            <input type="text" id="codigo" placeholder="codigo" disabled="true" required>
+            <button type="button" id="btnEnviar">Enviar Dados</button>
+        </form>
+    </div>
+    <script src="formularioRetirada.js"></script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style-CadastroONU.css">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <title>Cadastro de Produtos - ONU</title>
+        <!-- Inclua aqui seu CSS para estilização -->
+    </head>
+    <body>
+        <div class="container-wrapper">
+            <div class="container">
+                <div class="content-wrapper">
+                    <div class="form-container">
+                        <h1>Cadastro de Produtos - ONU</h1>
+                        <form id="formCadastroONT">
+                            <label for="tipo">Tipo:</label>
+                            <input type="text" id="tipo" name="tipo" value="ONU" readonly>
+    
+                            <label for="marca">Marca:</label>
+                            <select id="marca" name="marca" onchange="atualizarModelos();">
+                                <option value="">Selecione</option>
+                                <option value="ZTE">ZTE</option>
+                                <option value="INTELBRAS">INTELBRAS</option>
+                                <option value="HUAWEI">HUAWEI</option>
+                            </select>
+    
+                            <label for="modelo">Modelo:</label>
+                            <select id="modelo" name="modelo" onchange="atualizarImagem();">
+                                <!-- As opções de modelo serão atualizadas dinamicamente com base na marca selecionada -->
+                            </select>
+    
+                            <label for="mac">MAC:</label>
+                            <input type="text" id="mac" name="mac">
+    
+                            <label for="codigo">Código:</label>
+                            <input type="text" id="codigo" name="codigo">
+    
+                            <button type="submit" >Cadastrar</button>
+                        </form>
+                    </div>
+                    <div class="img-container">
+                        <img id="imagemProduto" src="/assets/LOADING/imagem_padrao.png" alt="Imagem do Produto" style="display:none;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    <script src="script-CadastroOnu.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter JSON para Excel</title>
+    <link rel="stylesheet" href="style-jsonforexcel.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <div id="drop-area">
+            <input type="file" id="fileElem" multiple accept=".json" style="display:none" onchange="handleFiles(this.files)">
+            <label for="fileElem">Arraste e solte um arquivo JSON aqui</label>
+        </div>
+        <div class="button-container">
+            <button id="convertToJson">Converter para Excel</button>
+        </div>
+        <p id="fileInfo"></p>
+    </div>
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <script src="JsonForExcel.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Equipamento</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style-EditarEquipamento.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <h1>Editar Equipamento</h1>
+    <form id="formEditarEquipamento">
+        <!-- Campos de Edição -->
+        <div class="form-group">
+            <label for="marca">Marca:</label>
+            <input type="text" id="marca">
+        </div>
+        <div class="form-group">
+            <label for="modelo">Modelo:</label>
+            <input type="text" id="modelo">
+        </div>
+        <div class="form-group">
+            <label for="mac">MAC:</label>
+            <input type="text" id="mac">
+        </div>
+        <div class="form-group">
+            <label for="codigo">Código:</label>
+            <input type="text" id="codigo">
+        </div>
+
+        <!-- Popups -->
+        <div id="popupSucesso" class="popup" style="display:none;">
+            <div class="popup-conteudo">
+                <p>Alterações salvas com sucesso!</p>
+                <button onclick="fecharPopup('popupSucesso')">Ok</button>
+            </div>
+        </div>
+        
+        <div id="popupErro" class="popup" style="display:none;">
+            <div class="popup-conteudo">
+                <p>Erro ao buscar equipamento.</p>
+                <button onclick="fecharPopup('popupErro')">Ok</button>
+            </div>
+        </div>
+        
+        <div id="popupAlert" class="popup" style="display:none;">
+            <div class="popup-conteudo">
+                <p>Ação necessária.</p>
+                <button onclick="fecharPopup('popupAlert')">Ok</button>
+            </div>
+        </div>
+        <!-- Popup de Confirmação para Deleção -->
+        <div id="popupConfirmarDeletar" class="popup" style="display:none;">
+            <div class="popup-conteudo">
+                <p>Tem certeza que deseja deletar o equipamento?</p>
+                <button type="button" onclick="confirmarDeletar()">Sim</button>
+                <button type="button" onclick="fecharPopup('popupConfirmarDeletar')">Cancelar</button>
+            </div>
+        </div>
+
+        <div id="popupDeletarSucesso" class="popup" style="display:none;">
+            <div class="popup-conteudo">
+                <p>Equipamento deletado com sucesso!</p>
+                <button onclick="fecharPopup('popupDeletarSucesso')">Ok</button>
+            </div>
+        </div>
+            
+                    
+        <!-- Botões de Ação -->
+        <button type="button" class="save" onclick="salvarAlteracoes()">Salvar Alterações</button>
+        <button id="deleteEquipamento" class="delete">Deletar Equipamento</button>
+    </form>
+    <script src="editarEquipamento.js"></script>
+</body>
+</html>

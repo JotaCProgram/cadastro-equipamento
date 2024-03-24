@@ -1,0 +1,186 @@
+/* Estilos Globais */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #141414;
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"], select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #333;
+    background-color: #333;
+    color: #fff;
+}
+
+input[type="text"]:focus, select:focus {
+    border-color: #db0001;
+    outline: none;
+}
+
+button {
+    display: block;
+    width: 10px;
+    padding: 20px;
+    background-color: #df0e0e;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #a80000;
+    color: #ffffff;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens se ajustem conforme o tamanho da tela */
+    justify-content: space-around; /* Espaçamento entre os itens */
+    align-items: flex-start; /* Alinha itens ao topo */
+    gap: 20px; /* Espaçamento entre os itens */
+}
+
+.form-cadastro {
+    flex-basis: 45%; /* Define uma largura base para o formulário */
+    max-width: 45%; /* Impede que o formulário ultrapasse a largura definida */
+}
+
+.produto-card {
+    flex-basis: 45%; /* Define uma largura base para o card do produto */
+    max-width: 45%; /* Impede que o card do produto ultrapasse a largura definida */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+}
+
+.produto-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.container-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: start; /* Alinha os itens ao início */
+    height: 100vh; /* Faz o contêiner ocupar a altura total da janela */
+    padding: 20px;
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: flex-start; /* Alinha os itens ao início */
+    width: 100%; /* Utilize uma porcentagem ou valor fixo que satisfaça seu layout */
+    max-width: 1200px; /* Um valor máximo para a largura total */
+}
+
+.form-container {
+    flex: 1; /* Faz ambos os itens compartilharem igualmente o espaço disponível */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.img-container {
+    flex: 1; /* Faz ambos os itens compartilharem igualmente o espaço disponível */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; /* Centraliza a imagem horizontalmente */
+    margin-top: 140px; /* Adiciona um espaçamento no topo, ajuste conforme necessário */
+    margin-left: 10px;
+}
+
+
+.form-container {
+    margin-right: 20px; /* Espaçamento entre o formulário e a imagem */
+}
+
+.form-container label,
+.form-container input {
+    width: 100%; /* Faz todos os campos terem a mesma largura */
+    margin-bottom: 10px; /* Espaçamento entre os campos */
+}
+
+.form-container select{
+    width: 106%; /* Faz todos os campos terem a mesma largura */
+    margin-bottom: 10px; /* Espaçamento entre os campos */
+}
+
+
+.img-container {
+    justify-content: center; /* Centraliza a imagem verticalmente */
+    align-items: center; /* Centraliza a imagem horizontalmente */
+}
+@keyframes slideInFromLeft {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .img-container img.animate-image {
+      animation: slideInFromLeft 0.5s ease-out forwards;
+  }
+  
+.img-container img {
+    width: auto; /* Mantém a largura original da imagem */
+    max-height: 400px; /* Limita a altura da imagem */
+}
+
+
+
+/* Responsividade */
+@media (min-width: 768px) {
+    .container {
+        width: 50%;
+        margin: auto;
+    }
+
+    button {
+        width: auto;
+        display: inline-block;
+    }
+
+    .form-container label,
+    .form-container input,
+    .form-container button {
+        width: 100%; /* Faz todos os campos terem a mesma largura */
+        margin-bottom: 10px; /* Espaçamento entre os campos */
+    }
+
+    .form-container select{
+        width: 106%; /* Faz todos os campos terem a mesma largura */
+        margin-bottom: 10px; /* Espaçamento entre os campos */
+    }
+}
+
+

@@ -1,0 +1,210 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+#equipamentosContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Espalha os cards uniformemente, com espaço entre eles */
+    gap: 10px; /* Espaçamento entre os cards */
+}
+
+.equipamento-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: calc(33.333% - 20px); /* Três cards por linha, ajuste conforme necessário */
+    padding: 20px;
+    box-sizing: border-box; /* Garante que padding não afete a largura calculada */
+}
+
+.equipamento-card h3 {
+    color: #333;
+    margin-top: 0;
+}
+
+.equipamento-card p {
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.btn-retirar {
+    display: block; /* Faz o botão ocupar toda a largura do card */
+    background-color: #4CAF50; /* Cor de fundo verde */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none; /* Remove o sublinhado caso use <a> em vez de <button> */
+}
+
+.btn-retirar:hover {
+    background-color: #45a049; /* Um verde um pouco mais escuro ao passar o mouse */
+}
+
+
+/* Media Queries */
+
+@media (max-width: 1024px) {
+    .equipamento-card {
+        width: calc(50% - 20px); /* Dois cards por linha em tablets e dispositivos menores */
+    }
+    body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background-color: #f4f4f4;
+    }
+    
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+    
+    #equipamentosContainer {
+        display: flex;
+        flex-direction: column; /* Faz os itens se alinharem verticalmente */
+        align-items: center; /* Centraliza os cards horizontalmente */
+        gap: 20px; /* Espaçamento entre os cards */
+    }
+    
+    .equipamento-card {
+        background-color: #ffffff;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        width: 100%; /* Faz cada card ocupar a largura total do contêiner */
+        max-width: 600px; /* Opcional: Limita a largura máxima dos cards para leitura confortável */
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    
+    .equipamento-card h3, .equipamento-card p {
+        margin: 10px 0;
+        line-height: 1.5;
+    }
+    
+    .btn-retirar {
+        display: block;
+        background-color: #4CAF50;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        width: 100%; /* Faz o botão ocupar a largura total do card */
+    }
+    
+    .btn-retirar:hover {
+        background-color: #45a049;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    .equipamento-card {
+        width: 100%; /* Um card por linha em smartphones */
+    }
+    body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background-color: #f4f4f4;
+    }
+    
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+    
+    #equipamentosContainer {
+        display: flex;
+        flex-direction: column; /* Faz os itens se alinharem verticalmente */
+        align-items: center; /* Centraliza os cards horizontalmente */
+        gap: 20px; /* Espaçamento entre os cards */
+    }
+    
+    .equipamento-card {
+        background-color: #ffffff;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        width: 100%; /* Faz cada card ocupar a largura total do contêiner */
+        max-width: 600px; /* Opcional: Limita a largura máxima dos cards para leitura confortável */
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    
+    .equipamento-card h3, .equipamento-card p {
+        margin: 10px 0;
+        line-height: 1.5;
+    }
+    
+    .btn-retirar {
+        display: block;
+        background-color: #4CAF50;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        width: 100%; /* Faz o botão ocupar a largura total do card */
+    }
+    
+    .btn-retirar:hover {
+        background-color: #45a049;
+    }
+    
+}
+
+
+/* Estilizando os checkboxes */
+.checkbox-container {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px; /* Espaçamento à direita */
+}
+
+.checkbox-label {
+    font-size: 16px; /* Tamanho da fonte do label */
+}
+
+
+
+/* Estilizando a aparência do checkbox */
+.checkbox-custom {
+    display: inline-block;
+    width: 20px; /* Largura do checkbox */
+    height: 20px; /* Altura do checkbox */
+    border: 1px solid #ccc; /* Borda do checkbox */
+    border-radius: 3px; /* Borda arredondada */
+    cursor: pointer; /* Cursor ao passar por cima */
+    vertical-align: middle; /* Alinha verticalmente com o label */
+    margin-right: 5px; /* Espaçamento à direita */
+}
+
+/* Estilizando o indicador (o "check") do checkbox quando marcado */
+.checkbox-custom:checked {
+    background-color: #007bff; /* Cor de fundo quando marcado */
+}
+
+/* Oculta o indicador padrão do checkbox */
+.checkbox-custom:checked::after {
+    content: '\2713'; /* Adiciona o marcador de seleção */
+    font-size: 14px; /* Tamanho da fonte do marcador */
+    color: #fff; /* Cor do marcador */
+    text-align: center; /* Alinha o marcador ao centro */
+    line-height: 18px; /* Define a altura da linha */
+}

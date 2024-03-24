@@ -1,0 +1,108 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#equipamentosRetiradosContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.equipamento-card {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 10px;
+    width: calc(33.333% - 200px);
+    box-shadow: 0 4px 7px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.equipamento-card p {
+    margin-bottom: 2px; /* Ajusta o espaçamento entre os parágrafos */
+    line-height: 1.1; /* Reduz a altura da linha para um espaçamento mais apertado */
+}
+
+h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 2px;
+    margin-block-end: 1px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+
+
+.command-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+button {
+    background-color: #008cba;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #005f73;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px; /* Ajuste conforme necessário */
+}
+
+/* Estilizando os checkboxes */
+#checkboxContainer {
+    margin-bottom: 20px;
+}
+
+#checkboxContainer label {
+    margin-right: 10px;
+}
+
+#checkboxContainer input[type="checkbox"] {
+    vertical-align: middle;
+}
+
+
+@media (max-width: 768px) {
+    .equipamento-card {
+        width: 100%; /* Faz os cards ocuparem toda a largura em dispositivos menores */
+    }
+
+    .container {
+        margin: 10px 5%; /* Diminui a margem lateral para dispositivos menores */
+        padding: 10px;
+    }
+
+    .command-section {
+        width: 90%; /* Ajusta a largura da seção de comandos para se alinhar melhor */
+        margin: 0 auto; /* Centraliza a seção de comandos */
+    }
+}

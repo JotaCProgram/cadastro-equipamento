@@ -1,0 +1,81 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Faz o body ocupar toda a altura da viewport */
+}
+
+.container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 15px 20px;
+    width: 100%;
+    background-color: #005aef;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px; /* Adiciona um pouco de margem no topo do botão */
+}
+
+button:hover {
+    background-color: #003e9f;
+}
+
+.alert {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #f44336;
+    color: white;
+    border-radius: 5px;
+    text-align: center; /* Centraliza o texto dos alertas */
+}
+
+.alert.success {
+    background-color: #4CAF50;
+}
+
+/* Media Query para telas maiores: ajusta o tamanho do container */
+@media (min-width: 768px) {
+    .container {
+        max-width: 600px; /* Aumenta o tamanho do container em telas maiores */
+        width: 100%;
+        padding: 89px;
+        border-radius: 20px;
+    }
+    input[type="text"], input[type="password"] {
+        width: 100%;
+        padding: 15px;
+        margin: 10px 0;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+        box-sizing: border-box;
+    }
+}

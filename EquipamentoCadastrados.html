@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-EquipamentoCadastrados.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Equipamentos Cadastrados - ONT</title>
+</head>
+<body>
+    <h1>Equipamentos Cadastrados - ONT</h1>
+    <div class="search-container">
+        <input type="text" id="codigoPesquisa" placeholder="Digite o código...">
+        <button class="button search" onclick="buscarPorCodigo()">Pesquisar</button>
+    </div>
+    <div id="popupErro" class="popupErro">
+        Erro ao salvar Dados!
+    </div>  
+    <div id="popupErro-Armazenamento" class="popupErro-Armazenamento">
+        Dados Não Deletados!
+    </div>
+    <div id="popupSucesso-Armazenamento" class="popupSucesso-Armazenamento">
+        Dados deletados com sucesso!
+    </div>
+    <div>
+        <label for="filtroONT">ONT</label>
+        <input type="checkbox" id="filtroONT" onchange="filtrarEquipamentos()">
+        <label for="filtroONU">ONU</label>
+        <input type="checkbox" id="filtroONU" onchange="filtrarEquipamentos()">
+    </div>
+    <div id="cardsContainer">
+        <!-- Os cards de equipamentos serão gerados aqui -->
+    </div>
+
+    
+    <button id="downloadData" class="button download">Download dos Dados</button>
+    <button id="clearStorage" class="button clear" onclick="limparArmazenamento()">Limpar Armazenamento</button>
+    
+    <div id="popupConfirmacao" class="popup-confirmacao-escondido">
+        <div class="popup-confirmacao-conteudo">
+            <p>Tem certeza que deseja limpar todo o armazenamento?</p>
+            <button id="btnConfirmar">Confirmar</button>
+            <button id="btnCancelar">Cancelar</button>
+        </div>
+    </div>
+
+    <script src="EquipamentoCadastrado.js"></script>
+</body>
+</html>
