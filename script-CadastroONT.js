@@ -27,7 +27,7 @@ function atualizarImagem() {
     var marca = document.getElementById("marca").value;
     var modelo = document.getElementById("modelo").value;
     var imagemProduto = document.getElementById("imagemProduto");
-    var caminhoImagem = "/" + marca + "-" + modelo + ".png";
+    var caminhoImagem = marca + "-" + modelo + ".png";
 
     if (marca && modelo) {
         imagemProduto.src = caminhoImagem;
