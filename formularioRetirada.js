@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         marcarComoRetirado(mac); // Marca o equipamento como retirado
 
-        window.location.href = '/CadastroONT/RETIRADAS DE EQUIPAMENTOS/EQUIPAMENTOS RETIRADOS/EquipamentosRetirados.html';
+        window.location.href = 'EquipamentosRetirados.html';
     });
 });
 
